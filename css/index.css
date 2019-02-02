@@ -1,0 +1,1163 @@
+/* Colors:
+Brown:#382e15
+Light-Brown: #a2917f
+Pink-Brown: #97715b
+Red-Brown: #785d59 
+Blue:#838c9a
+white:rgb(195, 195, 195);
+*/
+
+
+/* :::::::App Setup:::::::: */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kodchasan', sans-serif;
+    font-size: 16px;
+}
+
+
+body {
+    
+    margin: 0%;
+    padding: 0%;
+    background-image: url(/imgs/SpaceX-Launch.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    
+}
+/* ::::::Loading Page::::::::::: */
+.load-background{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    z-index: 3;
+     animation: appear;
+    animation-duration: 6s;       
+}
+.animate-load-screen{
+    animation-name: hide-screen;
+    animation-duration: 3.5s;
+}
+.animate-loader{
+    animation-name: hide-loader;
+    animation-duration: 2.7s;
+}
+.hide{
+    display: none;
+}
+
+@keyframes hide-screen{
+    0%{
+       height: 100vh;
+        
+    }
+
+    100%{
+        height: 0vh;
+        
+    }
+    
+}
+@keyframes hide-loader{
+    0%{
+       opacity: 1;
+        
+    }
+
+    80%{
+        opacity: 0;
+        
+    }
+    100%{
+        opacity: 0;
+    }
+    
+}
+
+.stars, .twinkling{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    width:100%;
+    height:100%;
+    display:block;
+  }
+  
+  .stars {
+    background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+    z-index:0;
+  }
+  
+  .twinkling{
+    background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+    z-index:1;
+  
+    -moz-animation:move-twink-back 200s linear infinite;
+    -ms-animation:move-twink-back 200s linear infinite;
+    -o-animation:move-twink-back 200s linear infinite;
+    -webkit-animation:move-twink-back 200s linear infinite;
+    animation:move-twink-back 200s linear infinite;
+  }
+
+
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-webkit-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-moz-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-ms-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+
+
+ /* ::::::::Loading Icons::::::::  */
+
+
+
+
+.loader {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:600px;
+    height:600px;
+    box-sizing:border-box; z-index: 30;
+}
+.load-rocket{
+    display: block;
+    transform-origin: 30px;
+    position: absolute;
+    top:250px;
+    left: 575px;
+    transform: rotate(50deg);
+    font-size: 80px;
+    transform: rotate(180deg);
+    color: #785d59;
+    
+
+}
+.globe-background{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background-color: rgb(195, 195, 195);
+}
+
+.loader .globe-icon{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-size: 300px;
+    color: #785d59;
+
+}
+
+.loader .face {
+    position:absolute;
+ 
+}
+.loader .face.face1 {
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    border-radius:50%;
+    border-top:3px solid rgb(195, 195, 195);
+    animation:animate 3s linear infinite;
+}
+
+.loader .face .circle {
+    position:absolute;
+    top:calc(50% - 1px);
+    left:5%;
+    width:5%;
+    height:2px;
+    transform-origin:left;
+    
+}
+.loader .face .circle ion-icon {
+    position: absolute;
+    top:400px;
+   font-size: 400px;
+
+}
+ @keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform:rotate(360deg);
+    }
+} 
+    
+
+/* ::::::::::Home Page (page 1):::::::::::::::::::: */
+
+/* :::::Home Setup::::::: */
+
+
+#home-page {
+    position: relative;
+    z-index: 2;
+    height: 70vh;
+
+}
+/* :::::Header Navagation::::::: */
+
+
+.main-nav {
+    list-style: none;
+    position: fixed;
+    top:0;
+    z-index: 1;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    transform: skewX(320deg);
+    background-color: #97715b;
+    box-shadow: -5px 2px 7px rgba(0, 0, 0, 0.39);
+}
+
+.main-nav li {
+    cursor: pointer;
+    padding: 0% 5% 0% 50px;
+    font-size: 1.5rem;
+    color: rgb(195, 195, 195);
+    transform: skewX(20deg);
+    transition: all 0.3s;
+    animation-name: opacity;
+    animation-delay: 6s;
+    animation-duration: 8s;
+}
+
+
+
+.main-icon{
+    position: fixed;
+    z-index: 4;
+    top: 0px;
+    left: 12px;
+    font-size: 8rem;
+    color: black;
+    transform: rotate(45deg);
+    transition: all 0.3s;
+}
+
+.jumbotron {
+    display: grid;
+    position: fixed;
+    z-index: 3;
+   top:0;
+    background-color: #785d59;
+    width: 9%;
+    height: 90px;
+    transform: skewX(320deg);
+    text-align: center;
+    box-shadow: -5px 2px 7px rgba(0, 0, 0, 0.39);
+}
+
+.jumbotron h1 {
+    transform: skewX(20deg);
+    font-size: 2rem;
+    letter-spacing: 2px;
+    padding-top: 40px;
+    color: rgb(27, 27, 27);
+}
+
+
+
+.title-jumbo{
+    position: relative;
+    top:120px;
+    left:5%;
+    width: 90%;
+    height: 300px;
+    padding: 5px;
+    background-color:transparent;
+    color: rgb(195, 195, 195); 
+}
+
+.title-jumbo h1{
+    font-size: 4rem;
+    letter-spacing: 5px;
+    padding: 10px;
+    color: rgb(195, 195, 195);
+    animation-name: opacity;
+    animation-duration: 8s; 
+    animation-delay: 4500ms;
+  
+}
+
+.title-jumbo hr{
+    border: none;
+    width: 70%;
+    height: 2px;
+    padding: 2px;
+    background: #785d59;
+    margin-left: 100px;
+    animation-name: hr;
+    animation-duration: 4s;
+    animation-delay: 4000ms;
+     
+       
+}
+.title-jumbo h2{
+    font-size: 3rem;
+    letter-spacing: 3px;
+    padding-left: 40px;
+    animation-name: opacity;
+    animation-duration: 8s;
+    animation-delay: 4500ms;
+}
+.title-jumbo span{
+    color:black;
+    font-size: 3.2rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+
+}
+.title-jumbo p{
+    font-size: 2.3rem;
+    letter-spacing: 2px;
+    text-align: end;   
+    padding: 40px 30px 0px 80px;
+    color:black;
+    animation-name: opacity;
+    animation-duration: 8s;
+    animation-delay: 4500ms;
+   
+}
+.title-jumbo ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    
+}
+.title-jumbo ul li{
+    padding: 20px 100px 20px 100px;
+    
+}
+.title-jumbo ul li ion-icon {
+    font-size: 7rem;  
+    color: black;
+    border: 3px solid black;
+    border-radius: 50%;
+}
+
+header {
+    grid-column: 2/8;
+    grid-row: 1/1;
+}
+
+.grid {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 7.5% 2.5% 6.5% 2.5% 2.5% 1fr 7% 3%;
+    grid-template-rows: 60vh 40px 70px 70px 20px 720px;
+}
+.nums{
+    writing-mode: vertical-rl;
+text-orientation: mixed;
+    font-size: 1rem;
+    margin-right: 40px;
+}
+
+.side-num1 {
+  display: grid;
+  grid-column: 8/9;
+  grid-row: 1/2; 
+height: 100%;
+margin-top: 100px;
+width: 100%;
+
+}
+.side-num2 {
+  display: grid;
+  grid-column: 8/9;
+  grid-row: 4/9; 
+height: 90%;
+margin-top: 10px;
+width: 100%;
+
+}
+
+.side-num1 span{
+    background: rgb(195, 195, 195);
+    width: 1px;
+    height: 250px;
+}
+.side-num2 span{
+    background: rgb(195, 195, 195);
+    width: 1px;
+    height: 430px;
+}
+.side-num2 h1{
+    padding: 20px 0;
+}
+
+.side-num3 span{
+    background: rgb(195, 195, 195);
+    width: 1px;
+    height: 430px;
+}
+
+.side-num4 span{
+    background: rgb(195, 195, 195);
+    width: 1px;
+    height: 430px;
+}
+
+
+
+
+/* :::::Header Navagation::::::: */
+
+
+.main-nav {
+    list-style: none;
+    position: fixed;
+    z-index: 1;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    transform: skewX(320deg);
+    background-color: #97715b;
+    box-shadow: -5px 2px 7px rgba(0, 0, 0, 0.39);
+}
+
+.main-nav li {
+    cursor: pointer;
+    padding: 0% 5% 0% 50px;
+    font-size: 1.5rem;
+    color: rgb(195, 195, 195);
+    transform: skewX(20deg);
+    transition: all 0.3s;
+    animation-name: opacity;
+    animation-delay: 6s;
+    animation-duration: 8s;
+}
+
+
+
+.main-icon{
+    position: fixed;
+    z-index: 4;
+    top: 0px;
+    left: 12px;
+    font-size: 8rem;
+    color: black;
+    transform: rotate(45deg);
+    transition: all 0.3s;
+}
+
+/* ::::::::Header Button:::::::: */
+
+.nav-toggler {
+    display: none;
+}
+
+.toggler-border {
+    display: none;
+    background: rgb(0, 0, 0);
+    border-radius: 20%;
+    position: fixed;
+    top: 0.5%;
+    right: 1.3%;
+    z-index: 9;
+    width: 65px;
+    height: 53px;
+    animation-name: opacity;
+        animation-duration: 3s;
+        animation-delay: 5.5s;
+}
+
+.nav-toggler:checked {
+    transform: scale(1)
+}
+
+.nav-toggler:checked {
+    color: rgb(255, 255, 255);
+    transition-delay: 200ms;
+}
+
+.nav-toggler-label {
+    position: fixed;
+    top: 1%;
+    right: 2%;
+    z-index: 9;
+    padding: 20px 5px 20px 0px;
+    transition: transform;
+    transition-duration: 300ms;
+    display: none;
+
+}
+
+label span,
+label span::after,
+label span::before {
+    display: block;
+    box-shadow: -1px -1px 0px 0.1px #443d3c81;
+    background-color: #785d59;
+    height: 6px;
+    width: 40px;
+    border-radius: 3px;
+    position: relative;
+    transition: transform 300ms;
+}
+
+label span::after,
+label span::before {
+    content: '';
+    position: absolute;
+    padding-top: 2px;
+    width: 20px;
+    margin-left: 10px;
+}
+
+label span::after {
+    margin-top: 12px;
+}
+
+label span::before {
+    bottom: 12px;
+
+}
+
+label span::before {
+    bottom: 12px;
+
+}
+
+.nav-toggler:hover~label span,
+.nav-toggler:hover~label span:before,
+.nav-toggler:hover~label span:after {
+    background-color: rgb(195, 195, 195);
+    transform: scale(1.1);
+    box-shadow: 0 0 0;
+
+}
+
+.nav-toggler:checked~label span {
+    transform: rotate(230deg);
+
+}
+
+.nav-toggler:checked~label span {
+    transform: color 2s;
+    background-color: rgba(255, 0, 0, 0);
+
+}
+
+.nav-toggler:checked~label span::before {
+    top: .5px;
+    width: 45px;
+    margin-left: 0;
+}
+
+.nav-toggler:checked~label span::after {
+    transform: rotate(260deg);
+    left: 5px;
+    bottom: 0px;
+    width: 45px;
+    margin-left: -4px;
+}
+
+
+
+/* :::::Forecast Section::::::: */
+
+
+.forecast-header {
+    display: grid;
+    grid-column: 2/5;
+    grid-row: 4/5;
+    text-decoration: underline;
+    text-decoration-color: #97715b;
+    color: rgb(195, 195, 195);
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+#forecastIcons {
+    display: grid;
+    grid-column: 3/4;
+    grid-row: 6/7;
+    list-style: none;
+
+}
+
+#forecastIcons li {
+    height: 70%;
+    width: 100%;
+
+}
+
+#forecastIcons li ion-icon {
+    color: #97715b;
+    font-size: 5rem;
+    padding-top: 52px;
+    padding-left: 15%;
+
+}
+
+.forecast {
+    height: 100%;
+    display: grid;
+    grid-column: 3/4;
+    grid-row: 6/8;
+    color: rgb(195, 195, 195);
+    background: rgba(0, 0, 0, 0.63);
+    list-style: none;
+    text-align: center;
+
+}
+
+.forecast li {
+    display: flex;
+    box-sizing: content-box;
+    padding-left: 30%;
+    font-size: 1.1rem;
+    border: 1px solid black;
+    border-bottom: 0px;
+
+}
+
+
+/* :::::Launches Section::::::: */
+
+
+.launches-header {
+    display: grid;
+    grid-column: 6/7;
+    grid-row: 4/5;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: #97715b;
+    color: rgb(195, 195, 195);
+    font-size: 2.5rem;
+
+}
+
+#launchlist {
+    display: grid;
+    height: 100%;
+    grid-column: 6/7;
+    grid-row: 6/7;
+    background: rgba(0, 0, 0, 0.63);
+    list-style: none;
+
+}
+
+#launchlist li {
+    display: inline;
+    border: 2px solid rgba(0, 0, 0, 0.274);
+    border-bottom: 0px;
+    padding: 20px;
+    font-size: 1.7rem;
+    
+
+}
+
+#launchlist li span {
+    color: #97715b;
+    text-decoration: underline;
+    font-size: 1.7rem;
+
+}
+
+.launches {
+    color: rgb(195, 195, 195);
+    letter-spacing: 2px;
+
+}
+
+#nasa-link  {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 0.5%;
+    text-decoration: none;
+    text-decoration-color: rgba(255, 255, 255, 0);
+    font-size: 1.2rem;
+    color: #000000;
+    transition: all 0.3s;
+
+}
+.nasa-arrow{
+    font-size: 2rem;
+}
+
+
+
+/* :::::::Homepage Media Queries (page 1) ::::::: */
+@media screen and (max-width: 1700px) {
+
+    * {
+        font-size: 14px;
+    }
+    .title-jumbo p{
+        font-size: 2rem
+    }
+
+    #forecastIcons li ion-icon {
+        padding-left: 5px;
+    }
+
+
+}
+
+@media screen and (max-width: 1400px) {
+
+    * {
+        font-size: 14px;
+    }
+    .main-icon{
+        font-size: 6rem;
+        top: 8px;
+    }
+    .title-jumbo p{
+        font-size: 2rem;
+        white-space: normal;
+    }
+    .title-jumbo ul li ion-icon{
+        font-size: 7rem;
+    }
+    .forecast li {
+        font-size: 18px;
+    }
+
+    #forecastIcons li ion-icon {
+        font-size: 70px;
+    }
+
+}
+
+@media screen and (max-width:1200px) {
+
+.jumbotron h1{
+    font-size: 1.5rem;
+}
+    .main-icon{
+        font-size: 6rem;
+        top: 8px;
+        left: 0px;
+    }
+    
+    .title-jumbo ul li ion-icon{
+        font-size: 6rem;
+    }
+
+    #forecastIcons li ion-icon {
+        font-size: 80px;
+    }
+
+    .forecast {
+        display: grid;
+        grid-column: 3/5;
+    }
+
+
+}
+
+@media screen and (max-width: 970px) {
+
+    * {
+        font-size: 11px;
+    }
+    
+    .main-icon{
+        font-size: 6rem;
+        top: 10px;
+        left: 8px;
+        animation-name: opacity;
+        animation-duration: 2s;
+        animation-delay: 6s;
+    }
+    @keyframes opacity{
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+
+    .jumbotron {
+        transform: none;
+        height: 65px;
+        width: 100%;
+        box-shadow: none;
+
+    }
+
+    .jumbotron h1 {
+        display: none
+    }
+
+    .nav-toggler-label {
+        display: initial;
+        margin-top: 10px;
+        animation-duration: 2s;
+        animation-delay: 5s;
+        animation-name: opacity;
+    }
+
+    .toggler-border {
+        display: initial;
+        margin-top: 10px;
+        animation-duration: 3s;
+        animation-delay: 7s;
+        animation-name: opacity;
+    }
+
+    .main-nav {
+        position: fixed;
+        z-index: 4;
+        display: none;
+        flex-direction: column;
+        width: 40%;
+        height: 225px;
+        top:0px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-top:87.45px;
+        margin-left: 60%;
+        box-shadow: none;
+        transform: none;
+        border-bottom-left-radius: 5%;
+        border-left: 0.5px solid rgba(0, 0, 0, 0.178);
+        border-bottom: 0.5px solid rgba(0, 0, 0, 0.178);
+
+    }
+
+    .main-nav li {
+        transform: none;
+        text-align: left;
+        font-size: 30px;
+        padding: 12px;
+      
+    }
+    
+    
+    .title-jumbo p{
+        font-size: 2.5rem;
+        white-space: normal;
+    }
+
+    .launches-header {
+        font-size: 35px;
+    }
+
+    #nasa-link {
+        padding-top: 2%;
+        font-size: 1.4rem;
+
+    }
+
+    #forecastIcons li ion-icon {
+        font-size: 65px;
+    }
+
+    #launchlist li {
+        font-size:  22px;
+    }
+
+    .forecast {
+        display: grid;
+        grid-column: 3/5;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+
+    * {
+        font-size: 11px;
+
+    }
+
+    .loader {
+        height: 300px;
+        width: 300px;
+    }
+    .loader .globe-icon{
+        font-size: 14rem;
+    }
+    .globe-background{
+        height: 120px;
+        width: 120px;
+    }
+
+    .load-rocket{
+    display: block;
+    transform-origin: 30px;
+    position: absolute;
+    top:90px;    
+    left: 265px;
+    font-size: 60px;
+    transform: rotate(180deg);
+        
+}
+    .title-jumbo p{
+        font-size: 2rem;
+    }
+    .title-jumbo ul li {
+        padding-right:60px;
+        padding-left: 60px; 
+    }
+
+    .launches-header {
+        font-size: 32px;
+        grid-column: 2/7;
+    }
+
+    #nasa-link {
+        padding-top: 4%;
+        font-size: 1.4rem;
+
+    }
+
+    #forecastIcons li ion-icon {
+        font-size: 65px;
+        padding-left: 15px;
+
+    }
+
+    #launchlist li {
+        font-size: 16px;
+        border-left: none;
+    }
+
+    .forecast {
+        display: grid;
+        grid-column: 3/6;
+    }
+
+    .forecast-header {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    
+    .title-jumbo h2{
+        font-size: 2rem;
+    }
+
+
+    .launches-header {
+        font-size: 32px;
+
+    }
+
+    #nasa-link {
+        padding-top: 4%;
+        font-size: 1.4rem;
+
+    }
+
+    #forecastIcons li ion-icon {
+        font-size: 55px;
+        padding-left: 15px;
+
+    }
+
+    #launchlist {
+        display: grid;
+        grid-column: 6/7;
+        grid-row: 6/7;
+        background: rgba(0, 0, 0, 0.63);
+        list-style: none;
+
+    }
+
+    #launchlist li {
+        font-size: 16px;
+        border-left: none;
+    }
+
+    .forecast {
+        display: grid;
+        grid-column: 3/6;
+    }
+
+    .forecast-header {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 570px) {
+
+    * {
+        font-size: 11px;
+    }
+
+    body{
+        background-position: 20%;
+    }
+    .main-nav{
+        margin-top: 65px;
+        width: 100%;
+        margin-left: 140px;
+    }
+    .toggler-border {
+        animation-duration: 4s;
+        animation-delay: 6.5s;  
+    }
+    .side-num1,.side-num2,.side-num3,.side-num4{
+        visibility: hidden;
+    }
+
+    .title-jumbo p{
+        font-size: 1.3rem;
+    }
+
+    .title-jumbo ul li {
+        padding-right:30px;
+        padding-left: 30px; 
+    }
+
+    .toggler-border{
+    width: 55px;
+    animation-name: opacity;
+    margin-top: 3px;
+    }
+    .nav-toggler-label{
+        margin-top: 4px;
+    }
+
+
+    .launches-header {
+        font-size: 27px;
+
+    }
+    
+    #launchlist li {
+        font-size:  18px;
+    }
+    #launchlist li span {
+        
+        font-size: 1.2rem;
+    
+    }
+  
+    .main-icon{
+        top:0;
+    }
+
+    #nasa-link {
+        padding-top: 2px;
+        font-size: 12px;
+
+    }
+
+    .forecast li {
+        padding-left: 4px;
+        padding-top: 30px;
+        font-size: 15px;
+    }
+
+    #forecastIcons li ion-icon {
+        font-size: 38px;
+        padding-top: 90px;
+        padding-left: 2px;
+    }
+
+    #launchlist li {
+        font-size: 12px;
+
+    }
+
+    .forecast {
+        display: grid;
+        grid-column: 3/6;
+
+    }
+
+}
+
+/* ::::::::Animations::::::: */
+
+.nav-display {
+    display: flex;
+    animation-name: nav-animate;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-in;
+}
+
+.li-display {
+    animation-duration: 0.5s;
+    animation-name: li-animate;
+}
+
+.main-icon:hover{
+    color:rgb(195, 195, 195);
+    transform: scale(.9)
+}
+.main-nav li:hover{
+    color:black;
+    transform: scale(.9)
+}
+#nasa-link:hover{
+    color: rgb(195, 195, 195);
+   
+}
+
+
+@keyframes nav-animate {
+    0% {
+        height: 0;
+        opacity: 0;
+    }
+
+    100% {
+        height: 250px;
+        opacity: 100%;
+    }
+}
+
+@keyframes li-animate {
+    0% {
+        font-size: 0px;
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        font-size: 30px;
+        opacity: 100%;
+    }
+}
+
+
+
+
+
+
+
+

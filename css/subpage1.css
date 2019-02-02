@@ -1,0 +1,332 @@
+
+/* :::::Campsites Section (subpage1) ::::::: */
+
+/* :::::::Page 2 Setup::::::: */
+
+#subpage1 {
+    display: grid;
+    grid-template-columns: 10% 37.5% 5% 37.5% 7% 3%;
+    grid-template-rows:  150px 400px 100px 100px 200px  200px; 
+    background: #97715b; 
+    margin-top: 1400px;
+    height: 700px;
+    box-shadow: 0px -5px 10px rgba(2, 1, 1, 0.308);
+}
+.side-num3 {
+    display: grid;
+    grid-column: 6/7;
+    grid-row: 1/2; 
+  height: 140%;
+  margin-top: 50px;
+  width: 100%;
+  }
+.side-num3 span{
+    height: 260px;
+}
+.side-num3 h1{
+    padding: 20px 0;
+}
+
+
+
+.map_header{
+    display: grid;
+    grid-column: 2/5;
+    grid-row: 1/2;
+    font-size: 6rem;
+    text-align: center;
+    padding-top: 10px;
+    text-decoration: underline rgb(195, 195, 195) ;
+}
+
+.map_container{
+    display:grid;
+    height: 100%;
+    grid-column: 2/5;
+    grid-row: 2/3 ;
+       
+}
+#map{
+    border-radius: 1rem;
+    border: 2px solid white;
+}
+
+.map_legend{
+    display: grid;
+    grid-column: 2/5;
+    grid-row: 3/4;
+    
+}
+.map_legend ul{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    list-style: none;    
+}
+.map_legend li{
+    text-align: center;
+    list-style: none;
+    padding: 10%;
+    font-size: 3rem;
+    line-height: 100%
+}
+.map_legend li:nth-child(1){  
+     grid-column: 1/2;
+     
+    
+}
+.map_legend li:nth-child(2){  
+     grid-column: 2/3;
+     
+}
+
+.map_legend ion-icon {
+    list-style: none;
+    font-size: 3rem;
+    padding-right: 2rem;
+       
+}
+#subpage2 {
+    display: grid;
+    grid-template-columns: 10% 37.5% 5% 37.5% 7% 3%;
+    grid-template-rows: 100px 800px 50px 800px  200px 30px ;
+    height: 1800px;    
+}
+.side-num4 {
+    display: grid;
+    grid-column: 6/7;
+    grid-row: 1/4; 
+  height: 500px;
+  margin-top: 50px;
+  box-shadow: none;
+  }
+.side-num4 span{
+    height: 430px;
+    box-shadow: none;
+}
+.side-num4 span:nth-child(2){
+    height: 430px;
+    box-shadow: none;
+}
+.side-num4 #nums4{
+    padding: 20px 0;
+    padding-right: 30px;
+    font-size: 1rem;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
+#subpage2 h1{
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 10px;
+    box-shadow: none;
+}
+
+.card{
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.445);
+    
+}
+#subpage2  li{
+    list-style: none;
+    padding: 2%;
+    font-size: 1.3rem
+}
+#subpage2  li span{
+    color:rgb(195, 195, 195) ;
+    font-size: 2rem;   
+}
+#subpage2  li a{
+    display: inline-block;
+    font-size: 1rem;
+    color:black;
+    text-decoration: none;
+    transition: all 0.3s;
+    padding-top: 32px;
+}
+#subpage2  li ion-icon{
+    color:black;
+    font-size: 1.5rem;
+    padding: none;
+    transition: all 0.3s;
+       
+}
+
+.card_container1{
+    grid-column: 2/3;
+    grid-row: 2/3;  
+}
+.card_container1 .card_img{
+    background-image: url(/imgs/Jetty_Park_img1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.card_info{
+    background: #97715b;
+    height: 300px;
+}
+.card_container2{
+    grid-column: 4/5;
+    grid-row: 2/3;   
+}
+.card_container2 .card_img{
+    background-image: url(/imgs/KSC_img.jpg);
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.card_container3{
+    grid-column: 2/3;
+    grid-row: 4/5;
+    
+}
+.card_container3 .card_img{
+    background-image: url(/imgs/manatee_img.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.card_container4{
+    grid-column: 4/5;
+    grid-row: 4/5;
+    
+}
+.card_container4 .card_img{
+    background-image: url(/imgs/koa_img.imagecache.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#subpage2 .card_img{
+    height: 500px;
+}
+
+footer{
+   display: grid;
+   grid-column: 1/-1;
+   grid-row: 7/8;
+    background:#97715b;   
+}
+
+footer p{
+    padding: 1%;
+    font-size: 2rem;
+    text-align: center;
+}
+.credit{
+    display: grid;
+    grid-column: 5/-1;
+    grid-row: 6/7;
+}
+
+
+@media screen and (max-width: 970px){
+    .map_header{
+        font-size: 4rem;
+    }
+    .map_legend li{
+        font-size: 2rem;
+    }
+    #subpage2 {
+        display: grid;
+        grid-template-rows: 100px 800px 50px 800px 50px 800px 50px 800px 200px;
+        height: 1800px;
+    }  
+    .card_container1{
+        grid-column: 2/5;
+        grid-row: 2/3;
+          
+    }
+    #subpage2  li{
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    #subpage2  li span{
+        font-size: 2.7rem;
+        
+    }
+    #subpage2  li a{
+        font-size: 20px;
+    }
+   
+    .card_container2{
+        grid-column: 2/5;
+        grid-row: 4/5;   
+    }
+    .card_container3{
+        grid-column: 2/5;
+        grid-row: 6/7;   
+    }
+    .card_container4{
+        grid-column: 2/5;
+        grid-row: 8/9;   
+    }
+    .credit{
+        display: grid;
+        grid-column: 5/-1;
+        grid-row: 10/11;
+    }
+    footer{
+        grid-row: 11/12
+    }
+}
+
+/* :::::::::::Animations::::::::::::: */
+
+#subpage2  li a:hover {
+    color:rgb(195, 195, 195) ;
+    transform: scale(1.1);
+}
+#subpage2  li a:hover + ion-icon{
+    color:rgb(195, 195, 195) ;
+    padding-left: 8px;
+    transform: scale(1.1);
+}
+
+
+
+ .main-icon{
+    animation-name: opacity;
+    animation-delay: 6000ms;
+    animation-duration: 7s;
+ }
+
+
+
+
+@keyframes hr{
+    0%{
+        width: 0;
+        opacity: 0;
+    }
+    60%{
+        width: 0%;
+        opacity: 1;
+    }
+    100%{
+        width:70%;
+        
+    }
+}
+
+@keyframes opacity{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes scale{
+    0%{
+        height: 0;
+    }
+    90%{
+        height:550% ;
+    }
+    100%{
+        height: 480%;
+    }
+}

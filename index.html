@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Launchsite Camping</title>
+    <link rel="icon" type="image/ico" href="\imgs\rocket_icon.png" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://unpkg.com/ionicons@4.4.8/dist/ionicons.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Kodchasan:600" rel="stylesheet">
+    <script type="text/javascript" src="node_modules\jquery\dist\jquery.min.js"></script>
+    <script src="https://unpkg.com/ionicons@4.4.6/dist/ionicons.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css\Index.css">
+    <link rel="stylesheet" href="css\subpage1.css">
+</head>
+
+<body>
+    <!-- ---- Loading Page ---------->
+    <div class="load-background">
+            <div class="stars"></div>
+            <div class="twinkling"></div> -->
+            
+ <div class="loader">
+            <div class="face face1"><ion-icon class="load-rocket"name="rocket"></ion-icon>
+                <div class="circle"></div>
+            </div>
+            <div class="face face2">
+                <div class="circle"></div>
+            </div>
+            <div class="globe-background">
+            <ion-icon class="globe-icon" name="globe"></ion-icon></div>
+        </div> 
+    </div>
+
+    <!------------ Section 1 (titlepage) ----------------->
+    <div id="home-page" class="home-page">
+        <div class="title-jumbo">
+            <h1>Launchsite Camping</h1><hr>
+            <h2>Seeing rocket science doesn't have to <span>BE</span> rocket science</h2><p>This site will give you the run down on what's going up, when its going and where the best places to catch a glimpse are.</p><ul>
+                    <li><ion-icon name="rocket"></ion-icon></li>
+                    <li><ion-icon name="bonfire"></ion-icon></li>
+                    <li><ion-icon name="cloudy"></ion-icon>
+                </ul>
+        </div>
+    <!------------ Section 2 Launches/Forecast----------------->
+
+        <section class="grid">
+            <div class="side-num1">
+                <span></span><h1 class="nums">01</h1><span></span>
+            </div>
+                <div ><ion-icon class="main-icon" name="rocket"></ion-icon></div>
+                <div class="jumbotron">
+                </div>
+            <header id="header">
+                <div class="toggler-border">
+                    <input type="checkbox" id="nav-toggler" class="nav-toggler"><label for="nav-toggler" class="nav-toggler-label"><span></span></label>
+                </div>
+
+                <ul class="main-nav">
+                    <li id="launches-btn">Launches</li>
+                    <li id="map-btn">Map</li>
+                    <li id="campsites-btn">Campsites</li>
+                    
+                </ul>
+            </header>
+            <div class="side-num2">
+                    <span></span><h1 class="nums">02</h1><span></span>
+                </div>
+            <ul id="launchlist">
+            </ul>
+            <h1 class="forecast-header">Forcast</h1>
+            <h1 class="launches-header">Upcoming Rocket Launches<a id="nasa-link" href="https://www.kennedyspacecenter.com/launches-and-events/events-calendar?pageindex=1">Extended
+                    Launch Schedule <ion-icon class="nasa-arrow" name="arrow-round-forward"></ion-icon></a></li>
+            </h1>
+            <ul id="forecastIcons">
+            </ul>
+            <ul id="forecast">
+            </ul>
+            
+           
+        </section>
+    </div>
+
+<!--------------- Section 3 (map)-------->
+ 
+    <div id="subpage1">
+            <div class="side-num3">
+                    <span></span><h1 class="nums">03</h1><span></span>
+                </div>
+           
+        <h1 class="map_header">Campsites</h1>
+       
+                <div class="map_container">
+                    <div id="map"></div>
+                </div>
+                <ul class="map_legend">
+                    <li><ion-icon name="rocket"></ion-icon>Launchpads</li>
+                    <li><ion-icon name="bonfire"></ion-icon>Campsites
+                    </li>
+                </ul>
+            
+                
+        
+    </div>
+
+<!-- <------ Section 4 (campsites) -------------->
+
+<div id="subpage2">
+        <div class="side-num4">
+                <span></span><h1 id="nums4">04</h1><span></span>
+            </div>
+    <div class="card card_container1">
+        <div class="card_img"></div>
+        <div class="card_info">
+            <h1>Jetty Park</h1>
+            <ul>
+                    <li><span>Location: </span> 9035 Campground Circle <br>
+                            Cape Canaveral, Florida 32920</li>
+                    <li><span>Ammenities:</span> Rv, Lodging, Tent Camping</li>
+                    <li><a href="https://www.portcanaveral.com/Recreation/Jetty-Park-Beach-Pier">Go To Website</a><ion-icon name="arrow-round-forward"></ion-icon></li>
+            </ul>
+        </div>
+    </div>
+    <div class="card card_container2">
+        <div class="card_img"></div>
+        <div class="card_info"> <h1>KSC Campground</h1>
+            <ul>
+                <li><span>Location: </span>  Audobon Rd, Merritt Island,<br> FL 32953</li>
+                <li><span>Ammenities: </span>Rv, Tent Camping
+                </li>
+                <li><a href="https://nasaexchange.ksc.nasa.gov/KARSParkInformation/AboutKARS#">Go To Website</a><ion-icon name="arrow-round-forward"></ion-icon> </li>
+            </ul></div>
+    </div>
+    <div class="card card_container3">
+        <div class="card_img"></div>
+        <div class="card_info"> <h1>Manatee Hammock Park</h1>
+            <ul>
+                    <li><span>Location: </span> 7275 S. US 1<br>
+                            Titusville, FL 32780</li>
+                    <li><span>Ammenities: </span> RV, Tent Camping</li>
+                    <li><a href="https://www.campflorida.com/Campground/224/Manatee-Hammock-Park,Titusville,FL/">Go To Website</a><ion-icon name="arrow-round-forward"></ion-icon></li>
+            </ul></div>
+    </div>
+    <div class="card card_container4">
+        <div class="card_img"></div>
+        <div class="card_info"> <h1>KOA Campground</h1>
+            <ul>
+                    <li><span>Location: </span> 4513 West Main Street <br>Mims, FL 32754</li>
+                    <li><span>Ammenities: </span> RV,Lodging, Tent Camping</li>
+                    <li><a href="https://koa.com/campgrounds/titusville/">Go To Website</a><ion-icon name="arrow-round-forward"></ion-icon></li>
+            </ul></div>
+    </div> <!--  Space X Credit-->
+    <a class="credit" style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system,
+ BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, 
+ Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, 
+ sans-serif;font-size:12px;font-weight:bold;
+ line-height:1.2;display:inline-block;border-radius:3px"
+        href="https://unsplash.com/@spacex?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge"
+        target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from SpaceX">
+        <span style="display:inline-block;padding:2px 3px">
+            <svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-1px;fill:white"
+                viewBox="0 0 32 32">
+                <title>unsplash-logo</title>
+                <path d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 
+     4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 
+     4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 
+     4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 
+     7.5-3.4 7.5-7.5z"></path>
+            </svg></span>
+        <span style="display:inline-block;padding:2px 3px">SpaceX</span></a>
+    <footer>
+        <p>Aaron Bonetti 2018</p>
+    </footer>
+</div>
+
+
+
+</body>
+<script src="js\Ajax.js" async defer></script>
+<script src="js\main.js" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQGdQXtRFwyoaz7_QIK_GLRH2X47PRwSA" type="text/javascript">
+</script>
+
+   <!-- [if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif] -->
+  
+  
+
+</html>
