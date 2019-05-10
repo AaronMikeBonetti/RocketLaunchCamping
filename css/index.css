@@ -37,7 +37,7 @@ body {
     position: relative;
     height: 100vh;
     width: 100vw;
-    z-index: 3;
+    z-index: 60;
      animation: appear;
     animation-duration: 6s;       
 }
@@ -138,14 +138,15 @@ body {
     left:50%;
     transform:translate(-50%,-50%);
     width:600px;
-    height:100vh;
+    height:600px;
     box-sizing:border-box; z-index: 30;
 }
 .load-rocket{
     display: block;
     transform-origin: 30px;
     position: absolute;
-    top:250px;
+    z-index: 1;
+    top:280px;
     left: 575px;
     transform: rotate(50deg);
     font-size: 80px;
@@ -179,7 +180,7 @@ body {
     position:absolute;
  
 }
-.loader .face.face1 {
+.loader .face {
     top:0;
     left:0;
     right:0;
@@ -201,7 +202,7 @@ body {
 .loader .face .circle ion-icon {
     position: absolute;
     top:400px;
-   font-size: 400px;
+    font-size: 400px;
 
 }
  @keyframes animate {
@@ -267,6 +268,9 @@ body {
     color: rgb(0, 0, 0);
     transform: rotate(45deg);
     transition: all 0.3s;
+    animation-name: opacity;
+    animation-duration: 2s;
+    animation-delay: 6.3s;
 }
 
 .jumbotron {
@@ -285,7 +289,7 @@ body {
 
 .jumbotron h1 {
     transform: skewX(20deg);
-    font-size: 2rem;
+    font-size: 1.5rem;
     letter-spacing: 2px;
     padding-top: 40px;
     color: rgb(27, 27, 27);
@@ -389,16 +393,8 @@ text-orientation: mixed;
     margin-right: 40px;
 }
 
-.side-num1 {
-display: grid;
-grid-column: 8/9;
-grid-row: 1/2; 
-height: 100%;
-margin-top: 100px;
-width: 100%;
 
-}
-.side-num2 {
+.side-num1 {
 display: grid;
 grid-column: 8/9;
 grid-row: 4/9; 
@@ -408,19 +404,33 @@ width: 100%;
 
 }
 
+
 .side-num1 span{
     background: rgb(195, 195, 195);
     width: 1px;
-    height: 250px;
+    height: 430px;
 }
+.side-num2 {
+display: grid;
+grid-column: 6/7;
+grid-row: 1/1; 
+height: 90%;
+margin-top: 10px;
+width: 100%;
+
+}
+
+
 .side-num2 span{
     background: rgb(195, 195, 195);
     width: 1px;
     height: 430px;
 }
-.side-num2 h1{
+.side-num1 h1{
     padding: 20px 0;
 }
+
+
 
 .side-num3 span{
     background: rgb(195, 195, 195);
@@ -428,11 +438,7 @@ width: 100%;
     height: 430px;
 }
 
-.side-num4 span{
-    background: rgb(195, 195, 195);
-    width: 1px;
-    height: 430px;
-}
+
 
 
 
@@ -447,8 +453,7 @@ width: 100%;
 /* ::::::::Header Button:::::::: */
 
 .nav-toggler {
-    display: none;
-    
+    display: none;  
 }
 
 .toggler-border {
@@ -461,9 +466,7 @@ width: 100%;
     z-index: 9;
     width: 65px;
     height: 53px;
-    animation-name: opacity;
-        animation-duration: 3s;
-        animation-delay: 5.5s;
+    
 }
 
 .nav-toggler:checked {
@@ -572,17 +575,21 @@ label span::before {
     text-align: center;
 }
 
-#forecastIcons {
+.forecast-container{
     display: grid;
     grid-column: 3/4;
     grid-row: 6/7;
+    background: rgba(0, 0, 0, 0.63);
+}
+
+#forecastIcons {
+    
     list-style: none;
 
 }
 
 #forecastIcons li {
-    height: 70%;
-    width: 100%;
+    height: 20%;
 
 }
 
@@ -591,6 +598,7 @@ label span::before {
     font-size: 5rem;
     padding-top: 52px;
     padding-left: 15%;
+    
 
 }
 
@@ -600,7 +608,7 @@ label span::before {
     grid-column: 3/4;
     grid-row: 6/8;
     color: rgb(195, 195, 195);
-    background: rgba(0, 0, 0, 0.63);
+    
     list-style: none;
     text-align: center;
 
@@ -734,11 +742,16 @@ label span::before {
     #forecastIcons li ion-icon {
         font-size: 80px;
     }
+   
 
-    .forecast {
+    .forecast-container{
         display: grid;
-        grid-column: 3/5;
+        grid-column: 3/6;
+        grid-row: 6/7;
+        background: rgba(0, 0, 0, 0.63);
     }
+    
+   
 
 
 }
@@ -754,9 +767,7 @@ label span::before {
         font-size: 6rem;
         top: 0px;
         left: 2vw;
-        animation-name: opacity;
-        animation-duration: 2s;
-        animation-delay: 6s;
+        
     }
     @keyframes opacity{
         0%{
@@ -784,15 +795,15 @@ label span::before {
         display: initial;
         margin-top: 5px;
         animation-duration: 2s;
-        animation-delay: 5s;
+        animation-delay: 6s;
         animation-name: opacity;
     }
 
     .toggler-border {
         display: initial;
         margin-top: 5px;
-        animation-duration: 3s;
-        animation-delay: 7s;
+        animation-duration: 2s;
+        animation-delay: 6s;
         animation-name: opacity;
     }
 
@@ -808,7 +819,6 @@ label span::before {
         left:70vw;
         padding-top: 20px;
         padding-bottom: 20px;
-        
         box-shadow: none;
         transform: none;
         border-bottom-left-radius: 5%;
@@ -840,18 +850,20 @@ label span::before {
         font-size: 1.4rem;
 
     }
-
-    #forecastIcons li ion-icon {
-        font-size: 65px;
+    .forecast-header{
+        display: none;
+        }
+    .forecast-container{
+        display: none;
     }
-
-    #launchlist li {
-        font-size:  22px;
+    .launches-header {
+        
+        grid-column: 3/7;
+        
+    
     }
-
-    .forecast {
-        display: grid;
-        grid-column: 3/5;
+    #launchlist { 
+        grid-column: 3/7;
     }
 }
 
@@ -906,7 +918,7 @@ label span::before {
     }
 
     #forecastIcons li ion-icon {
-        font-size: 65px;
+        font-size: 5vw;
         padding-left: 15px;
 
     }
@@ -992,7 +1004,7 @@ label span::before {
     } */
     
     
-    .side-num1,.side-num2,.side-num3,.side-num4{
+    .side-num1,.side-num2,.side-num3{
         visibility: hidden;
     }
 
@@ -1094,7 +1106,7 @@ label span::before {
 
     100% {
         height: 250px;
-        opacity: 100%;
+        opacity: 1;
     }
 }
 

@@ -74,7 +74,7 @@ $(function(){
 
   $.ajax({
     type: 'GET',
-    url: 'https://api.darksky.net/forecast/2038ed25248f743cdd2d093f8202e6ef/28.396837,-80.605659?exclude=currently,flags,hourly,minutely&units=us',
+    url: 'https://api.darksky.net/forecast/2038ed25248f743cdd2d093f8202e6ef/28.5856559,-80.6507658?exclude=currently,flags,hourly,minutely&units=us',
     success: function(data){
         var forecast= [];
         for(i=0; i<=4; i++){

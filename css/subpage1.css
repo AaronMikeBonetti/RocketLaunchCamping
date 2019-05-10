@@ -14,13 +14,23 @@
     height: 700px;
     box-shadow: 0px -5px 10px rgba(2, 1, 1, 0.308);
 }
+.side-num3 #nums{
+    writing-mode: vertical-rl;
+text-orientation: mixed;
+    font-size: 1rem;
+    margin: 0;
+    margin-right: 40px;
+    width: 0px;
+    padding: 0;
+}
+
 .side-num3 {
     display: grid;
     grid-column: 6/7;
-    grid-row: 1/2; 
-  height: 140%;
-  margin-top: 50px;
-  width: 100%;
+    grid-row: 2/3; 
+    height: 140%;
+    margin-top: 50px;
+    width: 100%;
   }
 .side-num3 span{
     height: 260px;
@@ -95,29 +105,7 @@
     grid-template-rows: 100px 800px 50px 800px  200px 30px ;
     height: 1800px;    
 }
-.side-num4 {
-    display: grid;
-    grid-column: 6/7;
-    grid-row: 1/4; 
-  height: 500px;
-  margin-top: 50px;
-  box-shadow: none;
-  }
-.side-num4 span{
-    height: 430px;
-    box-shadow: none;
-}
-.side-num4 span:nth-child(2){
-    height: 430px;
-    box-shadow: none;
-}
-.side-num4 #nums4{
-    padding: 20px 0;
-    padding-right: 30px;
-    font-size: 1rem;
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-}
+
 
 #subpage2 h1{
     text-align: center;
@@ -206,18 +194,7 @@
     height: 500px;
 }
 
-footer{
-   display: grid;
-   grid-column: 1/-1;
-   grid-row: 7/8;
-    border-top: 2px solid rgb(195, 195, 195); 
-}
 
-footer p{
-    padding: 1%;
-    font-size: 2rem;
-    text-align: center;
-}
 .credit{
     display: grid;
     grid-column: 5/-1;
@@ -289,11 +266,6 @@ footer p{
 
 
 
- .main-icon{
-    animation-name: opacity;
-    animation-delay: 6000ms;
-    animation-duration: 7s;
- }
 
 
 
