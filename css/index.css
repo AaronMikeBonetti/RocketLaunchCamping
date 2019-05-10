@@ -20,6 +20,8 @@ white:rgb(195, 195, 195);
 }
 
 
+
+
 body {
     width: 100vw;
     margin: 0%;
@@ -221,7 +223,8 @@ body {
     position: relative;
     z-index: 2;
     height: 70vh;
-    width: 100vw;
+    width: 90vw;
+    margin: auto;
 
 }
 /* :::::Header Navagation::::::: */
@@ -233,7 +236,7 @@ body {
     top:0;
     z-index: 1;
     left: 5%;
-    width: 80vw;
+    width: 85vw;
     display: flex;
     justify-content: flex-end;
     transform: skewX(320deg);
@@ -258,21 +261,21 @@ body {
 .main-icon{
     position: fixed;
     z-index: 4;
-    top: 0px;
+    top: -10px;
     left: 12px;
-    font-size: 8rem;
-    color: black;
+    font-size: 6rem;
+    color: rgb(0, 0, 0);
     transform: rotate(45deg);
     transition: all 0.3s;
 }
 
 .jumbotron {
-    
     position: fixed;
     z-index: 3;
     top:0;
+    left: 0;
     background-color: #785d59;
-    width: 9%;
+    width: 120px;
     height: 65px;
     transform: skewX(320deg);
     text-align: center;
@@ -367,9 +370,8 @@ body {
     border-radius: 50%;
 }
 
-header {
-    grid-column: 2/8;
-    grid-row: 1/1;
+#header {
+    width: 100vw;
 }
 
 .grid {
@@ -438,43 +440,9 @@ width: 100%;
 /* :::::Header Navagation::::::: */
 
 
-.main-nav {
-    list-style: none;
-    position: fixed;
-    z-index: 1;
-    left: 5%;
-    width: 90vw;
-    display: flex;
-    justify-content: flex-end;
-    transform: skewX(320deg);
-    background-color: #97715b;
-    box-shadow: -5px 2px 7px rgba(0, 0, 0, 0.39);
-}
-
-.main-nav li {
-    cursor: pointer;
-    padding: 0% 5% 0% 50px;
-    font-size: 1.5rem;
-    color: rgb(195, 195, 195);
-    transform: skewX(20deg);
-    transition: all 0.3s;
-    animation-name: opacity;
-    animation-delay: 6s;
-    animation-duration: 8s;
-}
 
 
 
-.main-icon{
-    position: fixed;
-    z-index: 4;
-    top: 0px;
-    left: 12px;
-    font-size: 8rem;
-    color: black;
-    transform: rotate(45deg);
-    transition: all 0.3s;
-}
 
 /* ::::::::Header Button:::::::: */
 
@@ -489,7 +457,7 @@ width: 100%;
     border-radius: 20%;
     position: fixed;
     top: 0px;
-    right: 60px;
+    right: 20px;
     z-index: 9;
     width: 65px;
     height: 53px;
@@ -499,18 +467,16 @@ width: 100%;
 }
 
 .nav-toggler:checked {
-    transform: scale(1)
-}
-
-.nav-toggler:checked {
+    transform: scale(1);
     color: rgb(255, 255, 255);
     transition-delay: 200ms;
 }
 
+
 .nav-toggler-label {
     position: fixed;
-    top: 1%;
-    right: 65px;
+    top: 3px;
+    right: 25px;
     z-index: 9;
     padding: 20px 5px 20px 0px;
     transition: transform;
@@ -738,10 +704,7 @@ label span::before {
     * {
         font-size: 14px;
     }
-    .main-icon{
-        font-size: 6rem;
-        top: 8px;
-    }
+    
     .title-jumbo p{
         font-size: 2rem;
         white-space: normal;
@@ -763,13 +726,7 @@ label span::before {
 
 .jumbotron h1{
     font-size: 1.5rem;
-}
-    .main-icon{
-        font-size: 6rem;
-        top: 8px;
-        left: 0px;
-    }
-    
+}  
     .title-jumbo ul li ion-icon{
         font-size: 6rem;
     }
@@ -795,7 +752,7 @@ label span::before {
     
     .main-icon{
         font-size: 6rem;
-        top: 10px;
+        top: 0px;
         left: 2vw;
         animation-name: opacity;
         animation-duration: 2s;
@@ -844,13 +801,14 @@ label span::before {
         z-index: 4;
         display: none;
         flex-direction: column;
-        width: 40%;
+        width: 30vw;
         height: 225px;
-        top:0px;
+        top:65px;
+        right: 0px;
+        left:70vw;
         padding-top: 20px;
         padding-bottom: 20px;
-        margin-top:87.45px;
-        margin-left: 60%;
+        
         box-shadow: none;
         transform: none;
         border-bottom-left-radius: 5%;
@@ -862,7 +820,7 @@ label span::before {
     .main-nav li {
         transform: none;
         text-align: left;
-        font-size: 30px;
+        font-size: 3vw;
         padding: 12px;
       
     }
@@ -1027,11 +985,11 @@ label span::before {
     body{
         background-position: 20%;
     }
-    .main-nav{
+    /* .main-nav{
         margin-top: 65px;
         width: 100vw;
         margin-left: 140px;
-    }
+    } */
     
     
     .side-num1,.side-num2,.side-num3,.side-num4{
@@ -1065,9 +1023,7 @@ label span::before {
     
     }
   
-    .main-icon{
-        top:0;
-    }
+    
 
     #nasa-link {
         padding-top: 2px;
@@ -1106,7 +1062,6 @@ label span::before {
 
 .nav-display {
     display: flex;
-    width: 100vw;
     animation-name: nav-animate;
     animation-duration: 0.2s;
     animation-timing-function: ease-in;
