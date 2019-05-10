@@ -21,7 +21,7 @@ white:rgb(195, 195, 195);
 
 
 body {
-    
+    width: 100vw;
     margin: 0%;
     padding: 0%;
     background-image: url(/imgs/SpaceX-Launch.jpg);
@@ -34,7 +34,7 @@ body {
 .load-background{
     position: relative;
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     z-index: 3;
      animation: appear;
     animation-duration: 6s;       
@@ -136,7 +136,7 @@ body {
     left:50%;
     transform:translate(-50%,-50%);
     width:600px;
-    height:600px;
+    height:100vh;
     box-sizing:border-box; z-index: 30;
 }
 .load-rocket{
@@ -221,6 +221,7 @@ body {
     position: relative;
     z-index: 2;
     height: 70vh;
+    width: 100vw;
 
 }
 /* :::::Header Navagation::::::: */
@@ -232,7 +233,7 @@ body {
     top:0;
     z-index: 1;
     left: 5%;
-    width: 90%;
+    width: 80vw;
     display: flex;
     justify-content: flex-end;
     transform: skewX(320deg);
@@ -269,13 +270,14 @@ body {
     display: grid;
     position: fixed;
     z-index: 3;
-   top:0;
+    top:0;
     background-color: #785d59;
     width: 9%;
-    height: 90px;
+    height: 65px;
     transform: skewX(320deg);
     text-align: center;
     box-shadow: -5px 2px 7px rgba(0, 0, 0, 0.39);
+    padding: 0;
 }
 
 .jumbotron h1 {
@@ -384,18 +386,18 @@ text-orientation: mixed;
 }
 
 .side-num1 {
-  display: grid;
-  grid-column: 8/9;
-  grid-row: 1/2; 
+display: grid;
+grid-column: 8/9;
+grid-row: 1/2; 
 height: 100%;
 margin-top: 100px;
 width: 100%;
 
 }
 .side-num2 {
-  display: grid;
-  grid-column: 8/9;
-  grid-row: 4/9; 
+display: grid;
+grid-column: 8/9;
+grid-row: 4/9; 
 height: 90%;
 margin-top: 10px;
 width: 100%;
@@ -439,7 +441,7 @@ width: 100%;
     position: fixed;
     z-index: 1;
     left: 5%;
-    width: 90%;
+    width: 90vw;
     display: flex;
     justify-content: flex-end;
     transform: skewX(320deg);
@@ -476,6 +478,7 @@ width: 100%;
 
 .nav-toggler {
     display: none;
+    
 }
 
 .toggler-border {
@@ -483,8 +486,8 @@ width: 100%;
     background: rgb(0, 0, 0);
     border-radius: 20%;
     position: fixed;
-    top: 0.5%;
-    right: 1.3%;
+    top: 0px;
+    right: 60px;
     z-index: 9;
     width: 65px;
     height: 53px;
@@ -505,7 +508,7 @@ width: 100%;
 .nav-toggler-label {
     position: fixed;
     top: 1%;
-    right: 2%;
+    right: 65px;
     z-index: 9;
     padding: 20px 5px 20px 0px;
     transition: transform;
@@ -787,10 +790,11 @@ label span::before {
         font-size: 11px;
     }
     
+    
     .main-icon{
         font-size: 6rem;
         top: 10px;
-        left: 8px;
+        left: 2vw;
         animation-name: opacity;
         animation-duration: 2s;
         animation-delay: 6s;
@@ -805,10 +809,11 @@ label span::before {
     }
 
     .jumbotron {
+        position: fixed;
         transform: none;
-        height: 65px;
-        width: 100%;
+        width: 100vw;
         box-shadow: none;
+        padding: none;
 
     }
 
@@ -818,7 +823,7 @@ label span::before {
 
     .nav-toggler-label {
         display: initial;
-        margin-top: 10px;
+        margin-top: 5px;
         animation-duration: 2s;
         animation-delay: 5s;
         animation-name: opacity;
@@ -826,7 +831,7 @@ label span::before {
 
     .toggler-border {
         display: initial;
-        margin-top: 10px;
+        margin-top: 5px;
         animation-duration: 3s;
         animation-delay: 7s;
         animation-name: opacity;
@@ -897,6 +902,7 @@ label span::before {
         font-size: 11px;
 
     }
+    
 
     .loader {
         height: 300px;
@@ -961,6 +967,8 @@ label span::before {
 }
 
 @media screen and (max-width: 700px) {
+
+    
     
     .title-jumbo h2{
         font-size: 2rem;
@@ -1019,13 +1027,11 @@ label span::before {
     }
     .main-nav{
         margin-top: 65px;
-        width: 100%;
+        width: 100vw;
         margin-left: 140px;
     }
-    .toggler-border {
-        animation-duration: 4s;
-        animation-delay: 6.5s;  
-    }
+    
+    
     .side-num1,.side-num2,.side-num3,.side-num4{
         visibility: hidden;
     }
@@ -1039,14 +1045,8 @@ label span::before {
         padding-left: 30px; 
     }
 
-    .toggler-border{
-    width: 55px;
-    animation-name: opacity;
-    margin-top: 3px;
-    }
-    .nav-toggler-label{
-        margin-top: 4px;
-    }
+    
+    
 
 
     .launches-header {
@@ -1098,10 +1098,13 @@ label span::before {
 
 }
 
+
+
 /* ::::::::Animations::::::: */
 
 .nav-display {
     display: flex;
+    width: 100vw;
     animation-name: nav-animate;
     animation-duration: 0.2s;
     animation-timing-function: ease-in;

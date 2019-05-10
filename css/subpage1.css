@@ -5,6 +5,7 @@
 
 #subpage1 {
     display: grid;
+    
     grid-template-columns: 10% 37.5% 5% 37.5% 7% 3%;
     grid-template-rows:  150px 400px 100px 100px 200px  200px; 
     background: #97715b; 

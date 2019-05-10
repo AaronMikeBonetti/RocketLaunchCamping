@@ -103,7 +103,7 @@ $(function(){
   });
   $.ajax({
     type: 'GET',
-    url: 'http://api.openweathermap.org/data/2.5/forecast?id=4149959&units=Imperial&APPID=19610317003906e21fb39af74af63ae6',
+    url: 'https://api.openweathermap.org/data/2.5/forecast?id=4149959&units=Imperial&APPID=19610317003906e21fb39af74af63ae6',
     success: function(data){
         var icons= [];
         for(i=1; i<=40; i+=8){
