@@ -210,7 +210,7 @@ footer{
    display: grid;
    grid-column: 1/-1;
    grid-row: 7/8;
-    background:#97715b;   
+    border-top: 2px solid rgb(195, 195, 195); 
 }
 
 footer p{
@@ -272,9 +272,7 @@ footer p{
         grid-column: 5/-1;
         grid-row: 10/11;
     }
-    footer{
-        grid-row: 11/12
-    }
+    
 }
 
 /* :::::::::::Animations::::::::::::: */

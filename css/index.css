@@ -221,7 +221,7 @@ body {
 
 #home-page {
     position: relative;
-    z-index: 2;
+    z-index: 1;
     height: 70vh;
     width: 90vw;
     margin: auto;
@@ -234,8 +234,8 @@ body {
     list-style: none;
     position: fixed;
     top:0;
-    z-index: 1;
-    left: 5%;
+    z-index: 2;
+    left: 30px;
     width: 85vw;
     display: flex;
     justify-content: flex-end;
@@ -247,7 +247,7 @@ body {
 .main-nav li {
     cursor: pointer;
     padding: 0% 5% 0% 50px;
-    font-size: 1.5rem;
+    font-size:2rem;
     color: rgb(195, 195, 195);
     transform: skewX(20deg);
     transition: all 0.3s;
@@ -260,7 +260,7 @@ body {
 
 .main-icon{
     position: fixed;
-    z-index: 4;
+    z-index: 3;
     top: -10px;
     left: 12px;
     font-size: 6rem;
@@ -271,7 +271,7 @@ body {
 
 .jumbotron {
     position: fixed;
-    z-index: 3;
+    z-index: 2;
     top:0;
     left: 0;
     background-color: #785d59;
