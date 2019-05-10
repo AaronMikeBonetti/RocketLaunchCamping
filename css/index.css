@@ -267,7 +267,7 @@ body {
 }
 
 .jumbotron {
-    display: grid;
+    
     position: fixed;
     z-index: 3;
     top:0;
@@ -293,8 +293,8 @@ body {
 .title-jumbo{
     position: relative;
     top:120px;
-    left:5%;
-    width: 90%;
+    margin: auto;
+    width: 80vw;
     height: 300px;
     padding: 5px;
     background-color:transparent;
@@ -374,6 +374,7 @@ header {
 
 .grid {
     height: 100%;
+    width: 100vw;
     display: grid;
     grid-template-columns: 7.5% 2.5% 6.5% 2.5% 2.5% 1fr 7% 3%;
     grid-template-rows: 60vh 40px 70px 70px 20px 720px;
