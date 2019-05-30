@@ -363,12 +363,13 @@ body {
     list-style: none;
     
 }
-.title-jumbo ul li{
-    padding: 20px 100px 20px 100px;
+.title-jumbo li{
+    padding: 60px 100px;
     
 }
+
 .title-jumbo ul li ion-icon {
-    font-size: 7rem;  
+    font-size: 7vw;  
     color: black;
     border: 3px solid black;
     border-radius: 50%;
@@ -717,9 +718,7 @@ label span::before {
         font-size: 2rem;
         white-space: normal;
     }
-    .title-jumbo ul li ion-icon{
-        font-size: 7rem;
-    }
+    
     .forecast li {
         font-size: 18px;
     }
@@ -735,9 +734,7 @@ label span::before {
 .jumbotron h1{
     font-size: 1.5rem;
 }  
-    .title-jumbo ul li ion-icon{
-        font-size: 6rem;
-    }
+    
 
     #forecastIcons li ion-icon {
         font-size: 80px;
@@ -830,7 +827,7 @@ label span::before {
     .main-nav li {
         transform: none;
         text-align: left;
-        font-size: 3vw;
+        font-size: 1vw;
         padding: 12px;
       
     }
@@ -901,10 +898,7 @@ label span::before {
     .title-jumbo p{
         font-size: 2rem;
     }
-    .title-jumbo ul li {
-        padding-right:60px;
-        padding-left: 60px; 
-    }
+    
 
     .launches-header {
         font-size: 32px;
